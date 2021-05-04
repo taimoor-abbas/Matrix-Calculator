@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/index.css">
+  <title>633 IPD Assignment 2</title>
+</head>
+
+<body>
+  <header>
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <p class="text-sm-start text-center">Taimoor Abbas<span class="float-sm-end">EP 1749113</span></p>
+          <h1 class="text-center"> Internet application development</h1>
+          <p class="text-center">Assignment - Martix calculation</p>
+        </div>
+      </div>
+    </div>
+  </header>
+  <main id="app">
+    <section id="quantity">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <h3>Select the number of the matrices (either 1 or 2)</h3>
+          </div>
+          <div class="col-4">
+            <p>matrix quantity</p>
+          </div>
+          <div class="col-8">
+            <div class="quantity-buttons">
+              <button id="quantity-1">1 matrix</button>
+              <button id="quantity-2">2 matrices</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="dimension">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <h3>Select the dimensions of the matrices (min 2x2, max 5x5)</h3>
+          </div>
+          <div class="col-4">dimension</div>
+          <div class="col-8">
+            <div class="row">
+              <div class="col-12">
+                <h5>dimension for matrix 1</h5>
+              </div>
+              <div class="col-6" id="dimension-1">
+                <div class="form-group">
+                  <label for="row-1">rows</label>
+                  <select id="row-1" class="form-control">
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="column-1">columns</label>
+                  <select id="column-1" class="form-control">
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                  </select>
+                </div>
+              </div>
+              <div class="col-6" id="dimension-2">
+                <div class="form-group">
+                  <label for="row-2">rows</label>
+                  <select id="row-2" class="form-control">
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="column-2">columns</label>
+                  <select id="column-2" class="form-control">
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="matrix-values">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <h5>Insert the values of the matrix</h5>
+          </div>
+          <div class="col-4">
+            matrix values
+          </div>
+          <div class="col-8">
+            <div class="row">
+              <div class="col-6">
+                <div id="matrix-1"> </div>
+              </div>
+              <div class="col-6">
+                <div id="matrix-2"> </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="matrix-actions">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <div id="single-martix-actions">
+              <h5>Actions for single matrix</h5>
+              <p id="find-determinant">Find determinant of the matrix:
+                <span class="js-target"></span>
+              </p>
+              <p id="find-transpose">Find transpose of the matrix:
+                <span class="js-target matrix"></span>
+              </p>
+              <p id="find-inverse">Find the inverse of the matrix.
+                <span class="js-target matrix"></span>
+              </p>
+              <p id="find-scalar-addition">Add a scalar to matrix
+                <input id="scalar-addition-input" type="number" value="1">
+                <span class="js-target matrix"></span>
+              </p>
+              <p id="find-scalar-multiplication">Multiply the matrix with a scalar
+                <input id="scalar-multiplication-input" type="number" value="2">
+                <span class="js-target matrix"></span>
+              </p>
+            </div>
+            <div id="multiple-martix-actions">
+              <h5>Actions for multiple matrices</h5>
+              <p id="find-matrices-multplication">Multiply the first matrix with the second.
+                <span class="js-target matrix"></span>
+              </p>
+              <p id="find-matrices-multplication-reverse">Multiply the second matrix with first.
+                <span class="js-target matrix"></span>
+              </p>
+              <p id="find-matrices-addition">Add both matrices
+                <span class="js-target matrix"></span>
+              </p>
+              <p id="find-matrices-subtraction">Subtract the first matrix from second
+                <span class="js-target matrix"></span>
+              </p>
+              <p id="find-matrices-subtraction-reverse">Subtract the second matrix from the first
+                <span class="js-target matrix"></span>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery-3.6.0.min.js"></script>
+  <script src="js/index.js" type="module"></script>
+  <script src="js/components/matrix-determinant.js" type="module"></script>
+  <script src="js/components/matrix-transpose.js" type="module"></script>
+  <script src="js/components/matrix-inverse.js" type="module"></script>
+  <script src="js/components/matrix-scalar-addition.js" type="module"></script>
+  <script src="js/components/matrix-scalar-multiplication.js" type="module"></script>
+
+  <script src="js/components/matrices-multiplication.js" type="module"></script>
+  <script src="js/components/matrices-addition.js" type="module"></script>
+  <script src="js/components/matrices-subtraction.js" type="module"></script>
+</body>
+
+</html>

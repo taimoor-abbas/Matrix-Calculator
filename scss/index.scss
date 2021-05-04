@@ -1,0 +1,46 @@
+$primary: #3e505c;
+$PC: #2d3b44;
+* {
+  outline: 1px solid rgba($color: #000000, $alpha: 0.1);
+}
+header {
+  background-color: $PC;
+  color: rgb(250, 11, 11);
+  margin-bottom: 20px;
+  padding: 5px 0 30px;
+
+  h1 {
+    text-transform: uppercase;
+  }
+
+  @media screen and (max-width: 576px) {
+    h1 {
+      font-size: 30px;
+    }
+  }
+
+  p {
+    letter-spacing: 2px;
+  }
+}
+
+#matrix-1,
+#matrix-2 {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-gap: 5px;
+  input {
+    width: 100%;
+  }
+}
+#single-martix-actions .js-target,
+#multiple-martix-actions .js-target {
+  display: block;
+  
+  &.matrix{
+    display: inline-block;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+    border-radius: 5px;
+  }
+}
